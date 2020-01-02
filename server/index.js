@@ -8,6 +8,9 @@ const app = express();
 app.use(bodyParser());
 app.use(cors());
 
+const posts = require('../routes/posts');
+app.use('/posts', posts);
+
 const port = 5000;
 
 app.listen(port, ()=> console.log(`Server running on port ${port}`));
