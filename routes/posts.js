@@ -13,3 +13,5 @@ router.get('/', (req, res) =>{
 
 
 // Delete Posts
+
+module.exports = router;
