@@ -5,10 +5,11 @@ const cors = require('cors');
 
 const app = express();
 // Middleware
-app.use(bodyParser());
+app.use(bodyParser.json());
 app.use(cors());
 
-const posts = require('../routes/posts');
+const posts = require('./routes/posts');
+
 app.use('/posts', posts);
 
 const port = 5000;
